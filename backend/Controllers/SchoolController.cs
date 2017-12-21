@@ -19,7 +19,7 @@ namespace backend.Controllers
             {
 
               _context.schools.Add(new School() {Id = 1, Name = "EHS", Address = "21400 Magnolia St", City = "Huntington Beach", State = "CA", PhoneNumber ="714.962.1356"});
-              _context.schools.Add(new School() {Id = 1, Name = "WHS", Address = "14325 Goldenwest St", City = "Westmsinter", State = "CA", PhoneNumber ="714 893 1381"});
+              _context.schools.Add(new School() {Id = 2, Name = "WHS", Address = "14325 Goldenwest St", City = "Westmsinter", State = "CA", PhoneNumber ="714 893 1381"});
               _context.SaveChanges();
                
             }

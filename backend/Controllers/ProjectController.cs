@@ -18,7 +18,7 @@ namespace backend.Controllers
             if(_context.projects.Count() == 0)
             {
                 _context.projects.Add(new Project(){Id = 1, Name="Science Fair", StartDate="12-25-2017", EndDate="12-26-2017", Subject="Science", GradeLevel="7", Description="Lorem Ipsum", TeacherId = 1, ProductId = 1});
-                _context.projects.Add(new Project(){Id = 1, Name="Math Challenge", StartDate="02-02-2018", EndDate="2-26-2018", Subject="Math", GradeLevel="8", Description="Lorem Ipsum", TeacherId = 1, ProductId = 1});
+                _context.projects.Add(new Project(){Id = 2, Name="Math Challenge", StartDate="02-02-2018", EndDate="2-26-2018", Subject="Math", GradeLevel="8", Description="Lorem Ipsum", TeacherId = 1, ProductId = 1});
                 
                 _context.SaveChanges();
             }
