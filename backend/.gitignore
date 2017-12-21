@@ -1,5 +1,5 @@
 ﻿.vscode
-obj
+obj/*
 bin
 .DS_Store
 .vs
