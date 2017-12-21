@@ -4,7 +4,7 @@ namespace backend.Controllers{
     
     public class Product
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string BrandName { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
