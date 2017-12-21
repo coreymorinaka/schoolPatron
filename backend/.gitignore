@@ -2,3 +2,5 @@
 obj
 bin
 .DS_Store
+.vs
+node_modules
