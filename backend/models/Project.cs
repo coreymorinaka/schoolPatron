@@ -2,18 +2,19 @@ using System;
 
 namespace backend.Controllers
 {
-    
+
     public class Project
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
         public string Subject { get; set; }
         public string GradeLevel { get; set; }
         public string Description { get; set; }
         public int TeacherId { get; set; }
-        public int ProductId {get; set; }
+        public int ProductId { get; set; }
 
     }
+
 }
