@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace backend.Controllers
 {
@@ -22,27 +23,37 @@ namespace backend.Controllers
                 _context.SaveChanges();
             }
         }
-        
+
         // GET
+        // [HttpGet]
+        // public List<Product> Get ()
+        // {
+        //     return _context.products.ToList ();
+        // }
         [HttpGet]
-        public List<Product> Get ()
+        public string Get(string query)
         {
-            return _context.products.ToList ();
+
+            WebClient client = new WebClient();
+
+            string response = client.DownloadString("http://api.walmartlabs.com/v1/search?query=" + query + "&format=json&apiKey=53dhpkus4f3y7wfzgncz9me5");
+
+            return response;
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public Product Get(int id)
-        {
-            foreach (Product p in _context.products)
-            {
-                if (p.Id == id)
-                {
-                    return p;
-                }
-            }
-            return null;
-        }
+        // [HttpGet("{id}")]
+        // public Product Get(int id)
+        // {
+        //     foreach (Product p in _context.products)
+        //     {
+        //         if (p.Id == id)
+        //         {
+        //             return p;
+        //         }
+        //     }
+        //     return null;
+        // }
         
         // POST api/values
         [HttpPost]
