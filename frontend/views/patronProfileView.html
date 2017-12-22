@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="patron-bg">
+        <div class="container">
+
+            <div class="row">
+                <h1 class="text-center">{{ patron.firstName }}  {{ patron.lastName }}</h1>
+                <p>
+                    <strong>Email: </strong>{{ patron.email }}</p>
+                <p>
+                    <strong>Password: </strong>{{ patron.password }}</p>
+                <button class="btn btn-sm btn-info" ui-sref="patronUpdate({id: patron.id})">Update</button>
+                <button class="btn btn-sm btn-danger" ng-click="deletePatron()">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>

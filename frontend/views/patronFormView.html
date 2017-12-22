@@ -1,0 +1,34 @@
+<div class="patron-form">
+
+        <div class="container">
+            
+              <h1 class="text-center patron-form-header">{{ heading }}</h1>
+            
+                <h3 class="patron-section-header">Patron Information</h3>
+            
+                <div class="form-group col-md-6">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" placeholder="Bill" ng-model="patron.firstName">
+                </div>
+            
+                <div class="form-group col-md-6">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" placeholder="Gates" ng-model="patron.lastName">
+                </div>
+            
+                <div class="form-group col-md-6">
+                  <label>Email</label>
+                  <input type="text" class="form-control" placeholder="billgates@microsoft.com" ng-model="patron.email">
+                </select>
+                </div>
+            
+                <div class="form-group col-md-6">
+                  <label>Password</label>
+                  <input type="password" class="form-control" ng-model="patron.password"> 
+                </div>
+            
+                <button ng-click="addPatron(patron)" ui-sref="home" class="btn btn-primary btn-lg pull-right" ng-show="submitButton">Submit</button>
+                <button ng-click="updatePatron(patron)" class="btn btn-success btn-lg pull-right" ng-show="!submitButton">Save</button>
+        
+            </div>
+          </div>

@@ -1,4 +1,4 @@
-app.service("patronService", function ($state, $http) {
+app.service("patronService", function ($http) {
     
     this.getPatrons= function () {
         return $http.get("http://localhost:5000/patron")

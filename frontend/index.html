@@ -21,14 +21,34 @@
 </head>
 
 <body>
+    <div class="custom-nav">
+        <ul class="custom-nav-items">
+            <li>
+                <a ui-sref="home">Home</a>
+            </li>
+            <li>
+                <a ui-sref="patrons">Patrons</a>
+            </li>
+        </ul>
+    </div>
 
     <div ui-view></div>
     <!-- Modules -->
     <script type="text/javascript" src="./app.js"></script>
     <!-- Services -->
     <script type="text/javascript" src="./services/walmartService.js"></script>
+    <script type="text/javascript" src="./services/patronService.js"></script>
+    <script type="text/javascript" src="./services/productService.js"></script>
+    <script type="text/javascript" src="./services/projectService.js"></script>
+    <script type="text/javascript" src="./services/schoolService.js"></script>
+    <script type="text/javascript" src="./services/teacherService.js"></script>
     <!-- Controllers -->
     <script type="text/javascript" src="./controllers/walmartController.js"></script>
+    <script type="text/javascript" src="./controllers/patronController.js"></script>
+    <script type="text/javascript" src="./controllers/productController.js"></script>
+    <script type="text/javascript" src="./controllers/projectController.js"></script>
+    <script type="text/javascript" src="./controllers/schoolController.js"></script>
+    <script type="text/javascript" src="./controllers/teacherController.js"></script>
 </body>
 
 </html>
