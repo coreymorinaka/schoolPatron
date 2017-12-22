@@ -32,4 +32,28 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/patronFormView.html",
       controller: "patronController"
     })
+    $stateProvider
+    .state("teachers", {
+      url: "/teachers",
+      templateUrl: "./views/teachersView.html",
+      controller: "teacherController"
+    })
+  $stateProvider
+    .state("teacherCreate", {
+      url: "/teacher/new",
+      templateUrl: "./views/teacherFormView.html",
+      controller: "teacherController"
+    })
+  $stateProvider
+    .state("teacher", {
+      url: "/teacher/:id",
+      templateUrl: "./views/teacherProfileView.html",
+      controller: "teacherController"
+    })
+  $stateProvider
+    .state("teacherUpdate", {
+      url: "/teacher/:id/edit",
+      templateUrl: "./views/teacherFormView.html",
+      controller: "teacherController"
+    })
 })

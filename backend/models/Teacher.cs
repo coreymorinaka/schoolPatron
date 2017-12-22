@@ -13,6 +13,7 @@ namespace backend.Controllers
     public string Bio { get; set; }
     public string Email { get; set; }
     public string GradeLevel { get; set; }
+    public string Password { get; set; }
 
 
     // public int SchoolId {get; set;}
