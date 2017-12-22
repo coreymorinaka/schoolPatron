@@ -1,4 +1,4 @@
-angular.module("schoolPatronApp").controller("productController", function ($scope, $http, $state, $stateParams, productService) {
+angular.module("schoolPatronApp").controller("walmartController", function ($scope, $http, $state, $stateParams, productService) {
     $scope.getProducts = function () {
         productService.getProducts($scope.query)
             .then(function (response) {

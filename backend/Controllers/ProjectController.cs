@@ -11,7 +11,6 @@ namespace backend.Controllers
     {
         private readonly SchoolPatronContext _context;
         public int projectId = 21;
-        
         public ProjectController (SchoolPatronContext context)
         {
             _context = context;
