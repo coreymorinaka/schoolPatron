@@ -1,17 +1,19 @@
 <div class="container">
-        <div class="teacher-bg">
-            <div class="container">
-    
-                <div class="row">
-                    <h1 class="text-center">{{ teacher.firstName }}  {{ teacher.lastName }}</h1>
-                    <p>
-                        <strong>Email: </strong>{{ teacher.email }}</p>
-                    <p>
-                        <strong>Password: </strong>{{ teacher.password }}</p>
-                    <button class="btn btn-sm btn-info" ui-sref="teacherUpdate({id: teacher.id})">Update</button>
-                    <button class="btn btn-sm btn-danger" ng-click="deleteTeacher()">Delete</button>
-                </div>
-    
+    <div class="teacher-bg">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">{{ teacher.firstName }} {{ teacher.lastName }}</h1>
+                <p>
+                    <strong>Email: </strong>{{ teacher.email }}</p>
+                <p>
+                    <strong>Password: </strong>{{ teacher.password }}</p>
+                <p>
+                    <strong>Grade Level: </strong>{{ teacher.gradeLevel }}</p>
+                <p>
+                    <strong>Bio: </strong>{{ teacher.bio }}</p>
+                <button class="btn btn-sm btn-info" ui-sref="teacherUpdate({id: teacher.id})">Update</button>
+                <button class="btn btn-sm btn-danger" ng-click="deleteTeacher()">Delete</button>
             </div>
         </div>
     </div>
+</div>
