@@ -11,6 +11,8 @@
                     <strong>Grade Level: </strong>{{ teacher.gradeLevel }}</p>
                 <p>
                     <strong>Bio: </strong>{{ teacher.bio }}</p>
+                <p>
+                    <strong>School Id: </strong>{{ teacher.schoolId }}</p>
                 <button class="btn btn-sm btn-info" ui-sref="teacherUpdate({id: teacher.id})">Update</button>
                 <button class="btn btn-sm btn-danger" ng-click="deleteTeacher()">Delete</button>
             </div>

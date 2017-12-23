@@ -5,8 +5,11 @@ app.controller("teacherController", function ($scope, $state, $stateParams, $htt
             id: 0,
             FirstName: "",
             LastName: "",
+            Bio: "",
             Email: "",
-            Password: ""
+            GradeLevel: "",
+            Password: "",
+            SchoolId: null
         }
 
         $scope.heading = "Create your Teacher Profile";
@@ -36,6 +39,7 @@ app.controller("teacherController", function ($scope, $state, $stateParams, $htt
         teacherService.addTeacher($scope.teacher)
             .then(function (response) {
                 console.log(response);
+                $state.go("patron", {id: response.data.id});
             }, function (error) {
                 console.log(error);
             })

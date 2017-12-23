@@ -36,6 +36,7 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
         patronService.addPatron($scope.patron)
             .then(function (response) {
                 console.log(response);
+                $state.go("patron", {id: response.data.id});
             }, function (error) {
                 console.log(error);
             })
@@ -47,7 +48,7 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
         patronService.updatePatron($scope.patron.id, $scope.patron)
             .then(function (response) {
                 console.log(response);
-                $state.go("patron", {id: $stateParams.id})
+                $state.go("patron", {id: $stateParams.id});
             }, function (error) {
                 console.log(error);
             })
