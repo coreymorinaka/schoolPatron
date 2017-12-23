@@ -11,7 +11,7 @@ namespace backend.Controllers{
         public string Category { get; set; }
         public bool InStock { get; set; }
         public string Description { get; set; }
-        public int PatronId { get; set; }
-        public int ProjectId { get; set; }
+        public int? PatronId { get; set; }
+        public int? ProjectId { get; set; }
     }
 }
