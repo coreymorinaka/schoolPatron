@@ -39,7 +39,7 @@ app.controller("teacherController", function ($scope, $state, $stateParams, $htt
         teacherService.addTeacher($scope.teacher)
             .then(function (response) {
                 console.log(response);
-                $state.go("patron", {id: response.data.id});
+                $state.go("teacher", {id: response.data.id});
             }, function (error) {
                 console.log(error);
             })

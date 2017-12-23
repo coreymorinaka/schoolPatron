@@ -9,8 +9,7 @@ namespace backend.Controllers
     [Route("patron")]
     public class PatronController : Controller
     {
-        private readonly SchoolPatronContext _context;
-        public int patronId = 21; 
+        private readonly SchoolPatronContext _context; 
         
         public PatronController (SchoolPatronContext context)
         {
@@ -66,7 +65,7 @@ namespace backend.Controllers
         [HttpPost]
         public Patron Post([FromBody]Patron p)
         {
-            p.Id = patronId++;
+            p.Id = _context.patrons.Count()+1;
             _context.patrons.Add(p);
             _context.SaveChanges();
 

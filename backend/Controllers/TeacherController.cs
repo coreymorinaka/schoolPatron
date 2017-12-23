@@ -10,7 +10,7 @@ namespace backend.Controllers
     public class TeacherController : Controller
     {
         private readonly SchoolPatronContext _context;
-        public int teacherId = 21; 
+        
         
         public TeacherController (SchoolPatronContext context)
         {
@@ -64,12 +64,11 @@ namespace backend.Controllers
             return null;
         }
         
-
         // POST api/values
         [HttpPost]
         public Teacher Post([FromBody]Teacher t)
         {
-            t.Id = teacherId++;
+            t.Id = _context.teachers.Count()+1;
             _context.teachers.Add(t);
             _context.SaveChanges();
 
