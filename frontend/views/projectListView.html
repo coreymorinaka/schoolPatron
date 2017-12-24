@@ -1,0 +1,44 @@
+<div class="project">
+
+    <div class="container">
+  
+      <h1 class="text-center project-h1">Be a Patron of a Project</h1>
+  
+      <div class="form-group col-md-12">
+        <input type="text" class="form-control" placeholder="Search for a project" ng-model="projectSearch">
+      </div>
+  
+      <div class="row project-section">
+  
+        <table class="table table-hover">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Subject</th>
+            <th>Grade Level</th>
+            <th>Description</th>
+            <th>Goal Reached?</th>
+            <th>Teacher Id</th>
+            <th>School Id</th>
+          </tr>
+          
+          <tr ng-repeat="project in projects | filter: projectSearch" ui-sref="project({id: project.id})">
+            <td>{{ project.id }}</td>
+            <td>{{ project.name }}</td>
+            <td>{{ project.startDate }}</td>
+            <td>{{ project.endDate }}</td>
+            <td>{{ project.subject }}</td>
+            <td>{{ project.gradeLevel }}</td>
+            <td>{{ project.description }}</td>
+            <td>{{ project.goalReached }}</td>
+            <td>{{ project.teacherId }}</td>
+            <td>{{ project.schoolId }}</td>
+          </tr>
+        </table>
+  
+      </div>
+  
+    </div>
+  </div>

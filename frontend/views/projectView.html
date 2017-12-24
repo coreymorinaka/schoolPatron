@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="project-bg">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">{{ project.name }}</h1>
+                <p>
+                    <strong>Start Date: </strong>{{ project.startDate }}</p>
+                <p>
+                    <strong>End Date: </strong>{{ project.endDate }}</p>
+                <p>
+                    <strong>Subject: </strong>{{ project.subject }}</p>
+                <p>
+                    <strong>Grade Level: </strong>{{ project.gradeLevel }}</p>
+                <p>
+                    <strong>Description: </strong>{{ project.description }}</p>
+                <p>
+                    <strong>Goal Reached: </strong>{{ project.goalReached }}</p>
+                <p>
+                    <strong>Teacher Id: </strong>{{ project.teacherId }}</p>
+                <p>
+                    <strong>School Id: </strong>{{ project.schoolId }}</p>
+                    
+                <button class="btn btn-sm btn-info" ui-sref="projectUpdate({id: project.id})">Update</button>
+                <button class="btn btn-sm btn-danger" ng-click="deleteproject()">Delete</button>
+
+                <button class="btn btn-sm btn-success pull-right" ng-click="addProject()">Add a Project</button>
+            </div>
+        </div>
+    </div>
+</div>
