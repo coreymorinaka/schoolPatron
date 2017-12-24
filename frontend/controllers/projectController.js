@@ -59,6 +59,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, $htt
             })
     }
     $scope.deleteProject = function () {
+        console.log("test");
         projectService.deleteProject($scope.project.id)
             .then(function (response) {
                 console.log(response);
