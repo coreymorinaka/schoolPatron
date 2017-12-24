@@ -13,6 +13,6 @@ namespace backend.Controllers
     public string GradeLevel { get; set; }
     public string Password { get; set; }
     public int? SchoolId { get; set; }
-    public List<Project> projects { get; set; }
+    
   }
 }

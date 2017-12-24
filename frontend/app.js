@@ -8,6 +8,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       url: "/",
       templateUrl: "./views/homeView.html",
     })
+
+    // PATRONS 
+
   $stateProvider
     .state("patrons", {
       url: "/patrons",
@@ -32,7 +35,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/patronFormView.html",
       controller: "patronController"
     })
-    $stateProvider
+
+    // TEACHER 
+
+  $stateProvider
     .state("teachers", {
       url: "/teachers",
       templateUrl: "./views/teachersView.html",
@@ -56,4 +62,32 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/teacherFormView.html",
       controller: "teacherController"
     })
+
+  //PROJECT
+
+  $stateProvider
+    .state("projects", {
+      url: "/projects",
+      templateUrl: "./views/projectsView.html",
+      controller: "projectController"
+    })
+  $stateProvider
+    .state("projectCreate", {
+      url: "/project/new",
+      templateUrl: "./views/projectFormView.html",
+      controller: "projectController"
+    })
+  $stateProvider
+    .state("project", {
+      url: "/project/:id",
+      templateUrl: "./views/projectProfileView.html",
+      controller: "projectController"
+    })
+  $stateProvider
+    .state("projectUpdate", {
+      url: "/project/:id/edit",
+      templateUrl: "./views/projectFormView.html",
+      controller: "projectController"
+    })
+
 })
