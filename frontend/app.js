@@ -56,4 +56,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/teacherFormView.html",
       controller: "teacherController"
     })
+
+    
+
+
 })
