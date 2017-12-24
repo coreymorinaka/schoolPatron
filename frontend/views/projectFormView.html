@@ -56,4 +56,12 @@
       <button ng-click="updateProject(project)" class="btn btn-success btn-lg pull-right" ng-show="!submitButton">Save</button>
   
     </div>
+
+    <div class="container" ng-controller="walmartController">
+
+      <input class="" ng-model="query" type="text">
+      <button class="btn btn-default" ng-click="getWalmartProducts(query)">WALMART SEARCH</button>
+
+    </div>
+
   </div>
