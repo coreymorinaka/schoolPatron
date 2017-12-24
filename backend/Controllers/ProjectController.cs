@@ -10,7 +10,6 @@ namespace backend.Controllers
     public class ProjectController : Controller
     {
         private readonly SchoolPatronContext _context;
-        public int projectId = 21;
         public ProjectController (SchoolPatronContext context)
         {
             _context = context;
@@ -67,7 +66,7 @@ namespace backend.Controllers
         [HttpPost]
         public Project Post([FromBody]Project p)
         {
-            p.Id = projectId++;
+            p.Id = _context.patrons.Count()+1;
             _context.projects.Add(p);
             _context.SaveChanges();
 
