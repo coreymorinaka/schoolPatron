@@ -5,6 +5,7 @@ app.controller("walmartController", function ($scope, $http, $state, $stateParam
         walmartService.getWalmartProducts($scope.query)
             .then(function (response) {
                 console.log(response);
+                $scope.items=response.data.items;
             }, function(error){
                 console.log(error);
             })

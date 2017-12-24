@@ -62,6 +62,27 @@
       <input class="" ng-model="query" type="text">
       <button class="btn btn-default" ng-click="getWalmartProducts(query)">WALMART SEARCH</button>
 
+      <div class="container">
+        <table class="table table-hover">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Customer Review</th>
+          </tr>
+          
+          <tr ng-repeat="item in items | filter: projectSearch">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.salePrice }}</td>
+            <td>{{ item.shortDescription }}</td>
+            <td><img src="{{ item.mediumImage }}" alt=""></td>
+            <td>{{ item.customerRating }}</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
   </div>
