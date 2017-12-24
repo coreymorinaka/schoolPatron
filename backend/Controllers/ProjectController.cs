@@ -41,13 +41,13 @@ namespace backend.Controllers
             }
         }
         
-        // GET
+        //GET
         [HttpGet]
         public List<Project> Get ()
         {
             return _context.projects.ToList ();
         }
-
+       
         // GET api/values/5
         [HttpGet("{id}")]
         public Project Get(int id)

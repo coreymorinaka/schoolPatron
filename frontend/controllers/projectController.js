@@ -29,19 +29,20 @@ app.controller("projectController", function ($scope, $state, $stateParams, $htt
                 console.log(error);
             })
     }
-        projectService.getProjects()
-            .then(function (response) {
-                console.log(response);
-                $scope.projects = response.data
-            }, function (error) {
-                console.log(error);
-            })
+
+    projectService.getProjects()
+        .then(function (response) {
+            console.log(response);
+            $scope.projects = response.data
+        }, function (error) {
+            console.log(error);
+        })
 
     $scope.addProject = function () {
         projectService.addProject($scope.project)
             .then(function (response) {
                 console.log(response);
-                $state.go("project", {id: response.data.id});
+                $state.go("project", { id: response.data.id });
             }, function (error) {
                 console.log(error);
             })
@@ -53,7 +54,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, $htt
         projectService.updateProject($scope.project.id, $scope.project)
             .then(function (response) {
                 console.log(response);
-                $state.go("project", {id: $stateParams.id})
+                $state.go("project", { id: $stateParams.id })
             }, function (error) {
                 console.log(error);
             })

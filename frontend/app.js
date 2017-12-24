@@ -89,12 +89,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/projectFormView.html",
       controller: "projectController"
     })
-    
-  $stateProvider
-  .state("teacherProject", {
-    url: "/teacher/:id/project/new", 
-    templateUrl: "./views/projectFormView.html", 
-    controller: "projectController", 
-  })
+  // $stateProvider
+  // .state("teacherProject", {
+  //   url: "/teacher/:id/project/new", 
+  //   templateUrl: "./views/projectFormView.html", 
+  //   controller: "projectController", 
+  // })
 
 })
