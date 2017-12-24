@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace backend.Controllers
 {
@@ -16,6 +17,7 @@ namespace backend.Controllers
         public int? TeacherId { get; set; }
         public int? ProductId { get; set; }
         public int? SchoolId { get; set; }
+        public List<WalmartProduct> walmartproducts { get; set; }
 
     }
 
