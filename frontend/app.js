@@ -90,4 +90,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       controller: "projectController"
     })
 
+    
+  $stateProvider
+  .state("teacherProject", {
+    url: "/teacher/:id/project/new", 
+    templateUrl: "./views/projectFormView.html", 
+    controller: "projectController", 
+  })
+
 })
