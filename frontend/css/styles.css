@@ -11,7 +11,7 @@ background-color: #FDFCFD;
 
 .menu {
 height: 70px;
-padding: 25px;
+padding: 10px;
 background-color: #D9D4CF;
 }
 
@@ -47,3 +47,10 @@ background-color: #1D2B27;
   padding: 20px;
 }
 
+.login {
+  padding: 10px;
+}
+
+.h1color {
+  color: #47BFC2;
+}
