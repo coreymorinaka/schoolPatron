@@ -1,0 +1,49 @@
+body {
+  background-color: #FDFCFD;
+}
+
+.topheader {
+height: 130px;
+width: 100px;
+
+background-color: #FDFCFD;
+}
+
+.menu {
+height: 70px;
+padding: 25px;
+background-color: #D9D4CF;
+}
+
+.slide-image {
+height: auto;
+/* width: auto; */
+/* background-color: orange; */
+}
+
+.search {
+height: 80px;
+padding: 20px;
+background-color: #FDFCFD;
+}
+
+.featured-projects {
+height: auto;
+background-color: #D9D4CF;
+}
+
+.about-us {
+height: 130px;
+background-color: #FDFCFD;
+}
+
+.footer {
+height: 30px;
+color: aliceblue;
+background-color: #1D2B27;
+}
+
+.more-projects {
+  padding: 20px;
+}
+

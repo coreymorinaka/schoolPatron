@@ -1,5 +1,13 @@
 app.controller("projectController", function ($scope, $state, $stateParams, $http, projectService) {
 
+
+    $scope.array = [];
+
+    $scope.addWallMartProduct = function(name) {
+        $scope.array.push(name)
+        console.log($scope.array);
+    }
+
     if ($stateParams.id == null || $stateParams.id == "" || $stateParams.id == undefined) {
         $scope.project = {
             id: 0,
