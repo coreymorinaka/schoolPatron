@@ -16,7 +16,7 @@ namespace backend.Controllers
         public bool GoalReached { get; set; }
         public int? TeacherId { get; set; }
         public int? SchoolId { get; set; }
-        public List<WalmartProduct> walmartproducts { get; set; }
+        public List<WalmartProduct> walmartProducts { get; set; }
 
     }
 
