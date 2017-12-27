@@ -8,7 +8,7 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
             Email: "",
             Password: ""
         }
-
+        
         $scope.heading = "Create your Patron Profile";
         $scope.submitButton = true;
     }
@@ -19,6 +19,7 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
                 $scope.patron = response.data;
                 $scope.heading = "Update your Profile!";
                 $scope.submitButton = false;
+                
                 console.log($scope.patron);
             }, function (error) {
                 console.log(error);
