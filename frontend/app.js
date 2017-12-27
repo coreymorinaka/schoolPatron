@@ -1,5 +1,8 @@
 var app = angular.module("schoolPatronApp", ["ui.router", "jcs-autoValidate"])
 
+
+
+
 app.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");
 
