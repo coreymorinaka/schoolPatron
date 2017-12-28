@@ -1,6 +1,6 @@
 <div class="project">
 
-    <div class="container-fluid">
+    <div class="container">
   
       <h1 class="text-center project-h1">Be a Patron of a Project</h1>
   
@@ -22,7 +22,9 @@
             <th>Teacher Id</th>
             <th>School Id</th>
           </tr>
-          
+          <div class="form-group col-md-12 middle">
+            ddd
+          </div>
           <tr ng-repeat="project in projects | filter: projectSearch" ui-sref="project({id: project.id})">
             <td>{{ project.id }}</td>
             <td>{{ project.name }}</td>

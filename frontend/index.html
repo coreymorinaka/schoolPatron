@@ -24,22 +24,26 @@
 </head>
 
 <body>
-    <div class="custom-nav container-fluid">
-        <ul class="custom-nav-items">
-            <li>
-                <a ui-sref="home">Home</a>
-            </li>
-            <li>
-                <a ui-sref="patrons">Patrons</a>
-            </li>
-            <li>
-                <a ui-sref="teachers">Teachers</a>
-            </li>
-            <li>
-                <a ui-sref="projects">Projects</a>
-            </li>
-        </ul>
-    </div>
+
+        <div class="row menu text-center">
+                <div class="col-md-7">
+                    <img src="./images/logo.png" alt="">
+                    <a ui-sref="projects">PROJECTS</a> |
+                    <a ui-sref="home">HOME</a> |
+                    <a ui-sref="teachers">TEACHERS</a> |
+                    <a ui-sref="patrons">PATRONS</a> | ABOUT US | HELP</div>
+                <div class="col-md-5 login">
+                    <button ui-sref="patronCreate">Patron Sign Up</button>
+                    <button ui-sref="teacherCreate">Teacher Sign Up</button>
+                    
+                </div>
+        
+        
+        
+        
+            </div>
+
+
 
     <div ui-view></div>
     <!-- Modules -->

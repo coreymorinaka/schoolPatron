@@ -38,7 +38,8 @@ background-color: #FDFCFD;
 }
 
 .footer {
-height: 30px;
+height: 25px;
+padding: 2px;
 color: aliceblue;
 background-color: #1D2B27;
 }
@@ -53,4 +54,12 @@ background-color: #1D2B27;
 
 .h1color {
   color: #47BFC2;
+}
+
+.middle {
+  padding: 40px;
+}
+
+.mid {
+  padding: 50px;
 }
