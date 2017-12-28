@@ -17,7 +17,7 @@
         <div class="col-md-5 login">
             <button ui-sref="patronCreate">Patron Sign Up</button>
             <button ui-sref="teacherCreate">Teacher Sign Up</button>
-            
+
         </div>
 
 
@@ -59,39 +59,37 @@
     <div class="col-md-12 text-center">
         <H2 class="h1color">RECENT PROJECTS</H2>
     </div>
-    <div class="col-md-3 text-center"></div>
-    <div class="col-md-2 text-center">
-        <H3>Mrs. Quinn-Vasic’s</H3>
+    <div ui-sref="project({id: 1})" class="col-md-4 text-center">
+        <H3>Science Through Games</H3>
         <p>
-            <img src="./images/p1.png" alt="">
+            <img class="scienceExperiment" src="./images/scienceExperiment.jpg" alt="">
         </p>
-        <p>My students need to be able to move while they learn! Movement helps children regulate their bodies so that they can concentrate and retain new information.</p>
+        <p>Your donation will make my students Happy as they will be able to decipher hidden codes, visualize intrinsic patterns, solve challenging puzzles and also create their own .</p>
     </div>
-    <div class="col-md-2 text-center">
-        <H3>B-B-Bounce for Better</H3>
+    <div ui-sref="project({id: 2})" class="col-md-4 text-center">
+        <H3>Stand Up For Math</H3>
         <p>
-            <img src="./images/p1.png" alt="">
+            <img class="standingDesks" src="./images/standingDesks.JPG" alt="">
         </p>
-        <p>My students need to be able to move while they learn! Movement helps children regulate their bodies so that they can concentrate and retain new information.</p>
+        <p>The ability to stand and fidget, while still remaining actively engaged is amazing! This also gives students lateral space and a new perspective for thinking through math challenges. Flexible seating is an innovative way to encourage student learning in an otherwise traditional space.</p>
     </div>
-    <div class="col-md-2 text-center">
-        <H3>Freedom Drum Project</H3>
+    <div ui-sref="project({id: 3})" class="col-md-4 text-center">
+        <H3>Classroom Chromebooks</H3>
         <p>
-            <img src="./images/p1.png" alt="">
+            <img class="chromebooks" src="./images/chromebooks.jpeg" alt="">
         </p>
-        <p>My students need to be able to move while they learn! Movement helps children regulate their bodies so that they can concentrate and retain new information.</p>
+        <p>My students need 10 Chromebooks and Google EDU Management Console Licenses. My students are high school seniors who are simultaneously excited for and terrified by the prospect of college. In order to help them prepare for the academic demands of college, I have placed a heavy writing requirement in our ELA class spanning essays, poetry, memoirs, etc.</p>
     </div>
-    <div class="col-md-3 text-center"></div>
-   
+
     <div class="row">
-            <div class="col-md-4 text-center"></div>
-            <div class="col-md-4 more-projects text-center">
-                    <button class="btn btn-default btn-lg btn-block">See all most urgent projects</button></div>
-            <div class="col-md-4 text-center"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 more-projects text-center">
+            <button ui-sref="projects" class="btn btn-default text-center btn-lg btn-block">See all most urgent projects</button>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
 
-</div>
 
-            
 </div>
 
 <div class="row about-us text-center">

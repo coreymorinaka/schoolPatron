@@ -55,9 +55,17 @@ background-color: #1D2B27;
 .h1color {
   color: #47BFC2;
 }
-
-.middle {
-  padding: 40px;
+.scienceExperiment {
+  height: 300px;
+  width: 320px;
+}
+.standingDesks {
+  height: 300px;
+  width: 320px;
+}
+.chromebooks {
+  height: 300px;
+  width: 320px;
 }
 
 .mid {
