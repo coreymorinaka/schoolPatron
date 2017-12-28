@@ -17,6 +17,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
 
         $scope.heading = "Create a Project";
         $scope.submitButton = true;
+        $scope.goal = false;
     }
     else {
         projectService.getProjectById($stateParams.id)
@@ -25,6 +26,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 $scope.project = response.data;
                 $scope.heading = "Update your Project!";
                 $scope.submitButton = false;
+                $scope.goal = true;
                 console.log($scope.project);
             }, function (error) {
                 console.log(error);
@@ -81,12 +83,11 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
-
+$scope.projectProducts = [];
     $scope.addWalmartProductToProject = function(item) {
-        console.log(item)
         projectService.addWalmartProductToProject(item)
             .then(function(response) {
-                console.log(response)
+                $scope.projectProducts.push(response.data);
             }, 
             function(error) {
                 console.log(error)

@@ -19,6 +19,28 @@
                     <strong>Teacher Id: </strong>{{ project.teacherId }}</p>
                 <p>
                     <strong>School Id: </strong>{{ project.schoolId }}</p>
+                <div class="container-fluid">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Customer Review</th>
+                        </tr>
+                        <tr ng-repeat="walmartProduct in projectProducts">
+                            <td>{{ walmartProduct.name }}</td>
+                            <td>${{ walmartProduct.salePrice }}</td>
+                            <td>{{ walmartProduct.shortDescription }}</td>
+                            <td>
+                                <img src="{{ walmartProduct.mediumImage }}" alt="">
+                            </td>
+                            <td>
+                                <img src="{{ walmartProduct.customerRatingImage }}" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
                 <button class="btn btn-sm btn-info" ui-sref="projectUpdate({id: project.id})">Update</button>
                 <button class="btn btn-sm btn-danger" ng-click="deleteProject()">Delete</button>
