@@ -10,6 +10,6 @@ namespace backend.Controllers{
         public string ShortDescription { get; set; }
         public string MediumImage { get; set; }
         public string CustomerRatingImage { get; set; }
-        // public int? ProjectId { get; set; }
+        public int? ProjectId { get; set; }
     }
 }

@@ -10,12 +10,6 @@ namespace backend.Controllers
     [Route ("walmart")]
     public class WalmartController : Controller
     {
-        private readonly SchoolPatronContext _context;
-        public WalmartController ()
-        {
-
-        }
-
         [HttpGet]
         public string Get (string query)
         {

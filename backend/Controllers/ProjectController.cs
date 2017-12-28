@@ -72,7 +72,7 @@ namespace backend.Controllers
         {
             foreach (WalmartProduct p in _context.walmartProducts)
             {
-                if (p.Id == id)
+                if (p.ProjectId == id)
                 {
                     return p;
                 }
