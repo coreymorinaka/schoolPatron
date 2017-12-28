@@ -1,16 +1,8 @@
-app.controller("projectController", function ($scope, $state, $stateParams, $http, projectService) {
-
-
-    $scope.array = [];
-
-    $scope.addWallMartProduct = function(name) {
-        $scope.array.push(name)
-        console.log($scope.array);
-    }
+app.controller("projectController", function ($scope, $state, $stateParams, projectService, walmartService) {
 
     if ($stateParams.id == null || $stateParams.id == "" || $stateParams.id == undefined) {
         $scope.project = {
-            id: 0,
+            Id: 0,
             Name: "",
             StartDate: "",
             EndDate: "",
@@ -19,7 +11,8 @@ app.controller("projectController", function ($scope, $state, $stateParams, $htt
             Description: "",
             GoalReached: false,
             TeacherId: null,
-            SchoolId: null
+            SchoolId: null,
+            // walmartProducts = null
         }
 
         $scope.heading = "Create a Project";
@@ -59,7 +52,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, $htt
     $scope.updateProject = function () {
         console.log($stateParams.id);
         console.log($scope.project);
-        projectService.updateProject($scope.project.id, $scope.project)
+        projectService.updateProject($stateParams.id, $scope.project)
             .then(function (response) {
                 console.log(response);
                 $state.go("project", { id: $stateParams.id })
@@ -69,12 +62,34 @@ app.controller("projectController", function ($scope, $state, $stateParams, $htt
     }
     $scope.deleteProject = function () {
         console.log("test");
-        projectService.deleteProject($scope.project.id)
+        projectService.deleteProject($stateParams.id)
             .then(function (response) {
                 console.log(response);
                 $state.go("projects");
             }, function (error) {
                 console.log(error);
+            })
+    }
+
+    $scope.getWalmartProducts = function() {
+        walmartService.getWalmartProducts($scope.query)
+            .then(function (response) {
+                console.log(response);
+                $scope.items = response.data.items;
+                console.log($scope.items);
+            }, function (error) {
+                console.log(error);
+            })
+    }
+
+    $scope.addWalmartProductToProject = function(item) {
+        console.log(item)
+        projectService.addWalmartProductToProject(item)
+            .then(function(response) {
+                console.log(response)
+            }, 
+            function(error) {
+                console.log(error)
             })
     }
 })

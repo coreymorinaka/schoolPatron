@@ -6,10 +6,10 @@ namespace backend.Controllers{
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Price { get; set; }
-        public int ShortDescription { get; set; }
-        public string Image { get; set; }
-        public bool CustomerReviewRating { get; set; }
-        public int? ProjectId { get; set; }
+        public string SalePrice { get; set; }
+        public string ShortDescription { get; set; }
+        public string MediumImage { get; set; }
+        public string CustomerRatingImage { get; set; }
+        // public int? ProjectId { get; set; }
     }
 }

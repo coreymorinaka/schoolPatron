@@ -13,7 +13,7 @@ namespace backend.Controllers
         public DbSet<Patron> patrons { get; set; }
         public DbSet<School> schools { get; set; }
         public DbSet<Teacher> teachers { get; set; }
-        public DbSet<Product> products { get; set; }
+        public DbSet<WalmartProduct> walmartProducts { get; set; }
         public DbSet<Project> projects { get; set; }
     }
 

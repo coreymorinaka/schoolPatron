@@ -66,8 +66,18 @@ namespace backend.Controllers
         [HttpPost]
         public Project Post([FromBody]Project p)
         {
-            p.Id = _context.patrons.Count()+1;
+            p.Id = _context.projects.Count()+1;
             _context.projects.Add(p);
+            _context.SaveChanges();
+
+            return p;
+        }
+
+        [HttpPost]
+        public WalmartProduct Post([FromBody]WalmartProduct p)
+        {
+            p.Id = _context.projects.Count()+1;
+            _context.walmartProducts.Add(p);
             _context.SaveChanges();
 
             return p;

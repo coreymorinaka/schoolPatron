@@ -59,10 +59,35 @@
     </form>
   </div>
 
-  <div class="container-fluid" ng-controller="walmartController">
 
-    <input class="" ng-model="query" type="text">
-    <button class="btn btn-default" ng-click="getWalmartProducts(query)">WALMART SEARCH</button>
+  <div class="container-fluid" >
+    <table class="table table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Customer Review</th>
+      </tr>
+      <tr ng-repeat="walmartProduct in walmartProducts" ng-controller="walmartController">
+        <td>{{ walmartProduct.name }}</td>
+        <td>${{ walmartProduct.salePrice }}</td>
+        <td>{{ walmartProduct.shortDescription }}</td>
+        <td>
+          <img src="{{ walmartProduct.mediumImage }}" alt="">
+        </td>
+        <td>
+          <img src="{{ walmartProduct.customerRatingImage }}" alt="">
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="container-fluid">
+
+    <input ng-model="query" type="text">
+    <button class="btn btn-default" ng-click="getWalmartProducts()">WALMART SEARCH</button>
 
     <div class="container-fluid">
       <table class="table table-hover">
@@ -83,6 +108,9 @@
           </td>
           <td>
             <img src="{{ item.customerRatingImage }}" alt="">
+          </td>
+          <td>
+            <button ng-click="addWalmartProductToProject(item)">Add</button>
           </td>
         </tr>
       </table>
