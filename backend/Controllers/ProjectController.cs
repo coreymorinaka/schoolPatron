@@ -14,10 +14,6 @@ namespace backend.Controllers
         public ProjectController (SchoolPatronContext context)
         {
             _context = context;
-            if (_context.walmartProducts.Count () == 0)
-            {
-                _context.walmartProducts.Add (new WalmartProduct () { Id = 1, Name = "Toy", SalePrice = "$1.99", ShortDescription = "Cool Toy", MediumImage = "image", CustomerRatingImage = "4", ProjectId = 1 });
-            }
             if (_context.projects.Count () == 0)
             {
                 _context.projects.Add (new Project () { Id = 1, Name = "Science Through Games", StartDate = "12-09-2017", EndDate = "04-08-2018", Subject = "Science", GradeLevel = "4", Description = "My students need New Path Learning Science Curriculum Mastery Game Set Class Pack Edition, Grade 4 School Earth Science Skills Game, and Physical Science Curriculum Mastery Game for mastering science concepts while they are playing. In New Orleans, we are a High poverty, High achieving school. We need to make learning ‘authentic’. My gifted students learn about Earth Science, Physical Science and Biological science, master concepts involving Electrical circuits, Renewable Energy, like Solar and Wind energy, learn about the Human Body and the Environment while playing New Plath Science Master Games. My students love science and become very motivated with hands-on learning. My students come from a low-income, urban community, yet they continue to strive for improvement. My students are excited, motivated and ready to explore, but my gifted class lacks basic enrichment materials that could fire their imagination and open their eyes to the world of learning with a purpose. My students deserve the best; my parents wish for something more than worksheets and love making projects. I want my parents fully engaged and partner with me. These kits will help us do hands-on activities, building from imagination, make assigned projects a success. I want my students to love ‘doing’ SCIENCE, explore different modes of thinking, learn while making things with these awesome SCIENCE kits. Instead of only video games, they will become well rounded and come to appreciate LEARNING! Learning through Games is essential for my gifted students as they wish to master concepts in a fun way. They Love learning but it needs to be relevant and games like New Path Science Games on Earth Science & Physical Science Curriculum Mastery Games make students energized and involved in playing while learning together. New Path Science Games on Earth Science and Physical Science Curriculum Mastery Games are needed for making students learn difficult science concepts while playing games in groups, we need these New Path mastery Games to get high scores and we can make it happen with your kind donation. We are excited about getting together and competing to play in groups and get the hard concepts in science mastered along the way in a 'Fun' way. These games will help my students to stay motivated to learn about science and stay focused. Games are an essential part of learning and playing while learning with peers is way to get the mastery in science for 21st century students. They are leaders and have a lot of self-confidence and winning and scoring high on these games will enforce their trust in themselves and make them better at science and math. Everyday workout at mastery of these difficult science concepts will make them think like scientist and boost their creativity and imagination. The sky is the limit and they will choose science as career and make this world a better place.", GoalReached = false, TeacherId = 3, SchoolId = 1, });
@@ -122,6 +118,20 @@ namespace backend.Controllers
                 if (p.Id == id)
                 {
                     _context.projects.Remove (p);
+                    _context.SaveChanges ();
+                    return "deleted";
+                }
+            }
+            return "not found";
+        }
+        [HttpDelete ("walmart/{id}")]
+        public string DeleteItem (int id)
+        {
+            foreach (WalmartProduct p in _context.walmartProducts)
+            {
+                if (p.Id == id)
+                {
+                    _context.walmartProducts.Remove (p);
                     _context.SaveChanges ();
                     return "deleted";
                 }

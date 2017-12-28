@@ -25,4 +25,7 @@ app.service("projectService", function ($state, $http) {
     this.getProductsFromProjects= function () {
         return $http.get("http://localhost:5000/project/walmart")
     }
+    this.deleteItem = function(id){
+        return $http.delete("http://localhost:5000/project/walmart/" + id)
+    }
 })

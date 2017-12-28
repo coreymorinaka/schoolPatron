@@ -60,9 +60,10 @@
   </div>
 
 
-  <div class="container-fluid" >
+  <div class="container-fluid">
     <table class="table table-hover">
       <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Price</th>
         <th>Description</th>
@@ -70,14 +71,18 @@
         <th>Customer Review</th>
       </tr>
       <tr ng-repeat="walmartProduct in walmartItems">
+        <td>{{ walmartProduct.id }}</td>
         <td>{{ walmartProduct.name }}</td>
-        <td>${{ walmartProduct.salePrice }}</td>
+        <td>{{ walmartProduct.salePrice }}</td>
         <td>{{ walmartProduct.shortDescription }}</td>
         <td>
           <img ng-src="{{ walmartProduct.mediumImage }}" alt="">
         </td>
         <td>
           <img ng-src="{{ walmartProduct.customerRatingImage }}" alt="">
+        </td>
+        <td>
+          <button ng-click="deleteItem(walmartProduct.id)">Delete</button>
         </td>
       </tr>
     </table>
@@ -98,8 +103,11 @@
           <th>Image</th>
           <th>Customer Review</th>
         </tr>
-
+        <tr>
+          <h3>Products Added: {{ productsAdded }}</h3>
+        </tr>
         <tr ng-repeat="item in items | filter: projectSearch">
+
           <td>{{ item.name }}</td>
           <td>${{ item.salePrice }}</td>
           <td>{{ item.shortDescription }}</td>

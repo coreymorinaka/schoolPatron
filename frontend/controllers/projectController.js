@@ -86,10 +86,12 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
     }
     //Posting Walmart Products to db
     $scope.projectProducts = [];
+    $scope.productsAdded = 0;
     $scope.addWalmartProductToProject = function (item) {
         item.projectId = $stateParams.id;
         projectService.addWalmartProductToProject(item)
             .then(function (response) {
+                $scope.productsAdded++;
                 $scope.projectProducts.push(response.data);
             },
             function (error) {
@@ -105,14 +107,15 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
-    //Getting Walmart products by Id
-    // $scope.getProductFromProjectById = function () {
-    //     projectService.getProductFromProjectById($stateParams.id)
-    //         //Don't know what to put here ^, maybe $stateParams.id
-    //         .then(function (response) {
-    //             console.log(response);
-    //         }, function (error) {
-    //             console.log(error);
-    //         })
-    // }
+    $scope.deleteItem = function (id){
+        console.log("test");
+        projectService.deleteItem(id)
+            .then(function (response) {
+                $scope.productsAdded--;
+                console.log(response);
+                $state.go("project", { id: $stateParams.id })
+            }, function (error) {
+                console.log(error);
+            })
+    }
 })
