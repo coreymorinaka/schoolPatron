@@ -30,7 +30,7 @@
                         </tr>
                         <tr ng-repeat="walmartItem in walmartItems">
                             <td>{{ walmartItem.name }}</td>
-                            <td>${{ walmartItem.salePrice }}</td>
+                            <td>{{ walmartItem.salePrice }}</td>
                             <td>{{ walmartItem.shortDescription }}</td>
                             <td>
                                 <img ng-src="{{ walmartItem.mediumImage }}" alt="">
@@ -38,6 +38,7 @@
                             <td>
                                 <img ng-src="{{ walmartItem.customerRatingImage }}" alt="">
                             </td>
+                            <td ng-click="patronBuy()">Buy</td>
                         </tr>
                     </table>
                 </div>

@@ -73,19 +73,6 @@ namespace backend.Controllers
             return null;
         }
 
-        // [HttpGet ("walmart/{id}")]
-        // public WalmartProduct GetWalmartProductById (int id)
-        // {
-        //     foreach (WalmartProduct p in _context.walmartProducts)
-        //     {
-        //         if (p.ProjectId == id)
-        //         {
-        //             return p;
-        //         }
-        //     }
-        //     return null;
-        // }
-
         // POST api/values
         [HttpPost]
         public Project Post ([FromBody] Project p)
@@ -108,15 +95,15 @@ namespace backend.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut ("{id}")]
+        [HttpPut ("walmart/{id}")]
         public Project Put (int id, [FromBody] Project project)
         {
-            foreach (Project p in _context.projects)
+            foreach (Project p in _context.projects.Include("walmartProducts"))
             {
                 if (p.Id == id)
                 {
-                    _context.projects.Remove (p);
-                    _context.SaveChanges ();
+                    // _context.projects.Remove (p);
+                    // _context.SaveChanges ();
                     _context.projects.Add (project);
                     _context.SaveChanges ();
 

@@ -11,7 +11,7 @@ app.service("projectService", function ($state, $http) {
         return $http.post("http://localhost:5000/project/", project)
     }
     this.updateProject= function (id, project) {
-        return $http.put("http://localhost:5000/project/" + id, project)
+        return $http.put("http://localhost:5000/project/walmart" + id, project)
     }
     this.deleteProject= function (id) {
         return $http.delete("http://localhost:5000/project/" + id)
@@ -24,8 +24,5 @@ app.service("projectService", function ($state, $http) {
     }
     this.getProductsFromProjects= function () {
         return $http.get("http://localhost:5000/project/walmart")
-    }
-    this.getProductFromProjectById= function (id) {
-        return $http.get("http://localhost:5000/project/walmart/" + id)
     }
 })
