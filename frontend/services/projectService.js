@@ -26,6 +26,6 @@ app.service("projectService", function ($state, $http) {
         return $http.get("http://localhost:5000/project/walmart")
     }
     this.getProductFromProjectById= function (id) {
-        return $http.get("http://localhost:5000/project/walmart" + id)
+        return $http.get("http://localhost:5000/project/walmart/" + id)
     }
 })

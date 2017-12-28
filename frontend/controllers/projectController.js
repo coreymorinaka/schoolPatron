@@ -109,7 +109,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
         projectService.getProductFromProjectById($stateParams.id)
             //Don't know what to put here ^, maybe $stateParams.id
             .then(function (response) {
-                console.log(response.data);
+                console.log(response);
             }, function (error) {
                 console.log(error);
             })

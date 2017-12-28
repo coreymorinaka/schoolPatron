@@ -28,15 +28,15 @@
                             <th>Image</th>
                             <th>Customer Review</th>
                         </tr>
-                        <tr ng-repeat="walmartProduct in projectProducts">
+                        <tr ng-repeat="walmartProduct in walmartProducts">
                             <td>{{ walmartProduct.name }}</td>
                             <td>${{ walmartProduct.salePrice }}</td>
                             <td>{{ walmartProduct.shortDescription }}</td>
                             <td>
-                                <img src="{{ walmartProduct.mediumImage }}" alt="">
+                                <img ng-src="{{ walmartProduct.mediumImage }}" alt="">
                             </td>
                             <td>
-                                <img src="{{ walmartProduct.customerRatingImage }}" alt="">
+                                <img ng-src="{{ walmartProduct.customerRatingImage }}" alt="">
                             </td>
                         </tr>
                     </table>
@@ -44,8 +44,6 @@
 
                 <button class="btn btn-sm btn-info" ui-sref="projectUpdate({id: project.id})">Update</button>
                 <button class="btn btn-sm btn-danger" ng-click="deleteProject()">Delete</button>
-                <button ng-click="getProductFromProjectById()">Get Products</button>
-
                 <button class="btn btn-sm btn-success pull-right" ng-click="addProject()">Add a Project</button>
             </div>
         </div>
