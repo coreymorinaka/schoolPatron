@@ -20,6 +20,7 @@ app.controller("teacherController", function ($scope, $state, $stateParams, $htt
             .then(function (response) {
                 console.log(response.data);
                 $scope.teacher = response.data;
+                $scope.teacherProjects = response.data.projects;
                 $scope.heading = "Update your Profile!";
                 $scope.submitButton = false;
                 console.log($scope.teacher);
