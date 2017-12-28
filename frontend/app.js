@@ -70,7 +70,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
     .state("project", {
       url: "/project/:id",
-      templateUrl: "./views/projectView.html",
+      templateUrl: "./views/projectProfileView.html",
       controller: "projectController"
     })
     .state("projectUpdate", {

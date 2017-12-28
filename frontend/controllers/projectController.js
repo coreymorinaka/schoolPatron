@@ -72,8 +72,8 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
-
-    $scope.getWalmartProducts = function() {
+    //Search for Walmart Products
+    $scope.getWalmartProducts = function () {
         walmartService.getWalmartProducts($scope.query)
             .then(function (response) {
                 console.log(response);
@@ -83,14 +83,34 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
-$scope.projectProducts = [];
-    $scope.addWalmartProductToProject = function(item) {
+    //Posting Walmart Products to db
+    $scope.projectProducts = [];
+    $scope.addWalmartProductToProject = function (item) {
         projectService.addWalmartProductToProject(item)
-            .then(function(response) {
+            .then(function (response) {
                 $scope.projectProducts.push(response.data);
-            }, 
-            function(error) {
+            },
+            function (error) {
                 console.log(error)
+            })
+    }
+    //Getting Walmart Products from db
+    $scope.getProductsFromProjects = function () {
+        projectService.getProductsFromProjects()
+            .then(function (response) {
+                console.log(response);
+            }, function (error) {
+                console.log(error);
+            })
+    }
+    //Getting Walmart products by Id
+    $scope.getProductFromProjectById = function () {
+        projectService.getProductFromProjectById()
+                   //Don't know what to put here ^, maybe $stateParams.id
+            .then(function (response) {
+                console.log(response.data);
+            }, function (error) {
+                console.log(error);
             })
     }
 })
