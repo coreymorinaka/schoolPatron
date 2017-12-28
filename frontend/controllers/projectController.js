@@ -24,6 +24,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
             .then(function (response) {
                 console.log(response.data);
                 $scope.project = response.data;
+                $scope.walmartItems = response.data.walmartProducts;
                 $scope.heading = "Update your Project!";
                 $scope.submitButton = false;
                 $scope.goal = true;
@@ -105,13 +106,13 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
             })
     }
     //Getting Walmart products by Id
-    $scope.getProductFromProjectById = function () {
-        projectService.getProductFromProjectById($stateParams.id)
-            //Don't know what to put here ^, maybe $stateParams.id
-            .then(function (response) {
-                console.log(response);
-            }, function (error) {
-                console.log(error);
-            })
-    }
+    // $scope.getProductFromProjectById = function () {
+    //     projectService.getProductFromProjectById($stateParams.id)
+    //         //Don't know what to put here ^, maybe $stateParams.id
+    //         .then(function (response) {
+    //             console.log(response);
+    //         }, function (error) {
+    //             console.log(error);
+    //         })
+    // }
 })
