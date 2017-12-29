@@ -1,6 +1,6 @@
 # School Patron
-![School Patron Logo](/images/logo.jpg)
-
+![School Patron Logo](./images/logo.jpg)
+Format: ![Alt Text](url)
 
 ## BACKEND API
 
