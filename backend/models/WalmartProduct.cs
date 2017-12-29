@@ -11,5 +11,6 @@ namespace backend.Controllers{
         public string MediumImage { get; set; }
         public string CustomerRatingImage { get; set; }
         public int? ProjectId { get; set; }
+        public string AddToCartUrl { get; set; }
     }
 }

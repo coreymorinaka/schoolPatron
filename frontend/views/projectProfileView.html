@@ -49,7 +49,7 @@
                         <td>
                             <img ng-src="{{ walmartItem.customerRatingImage }}" alt="">
                         </td>
-                        <td ng-click="patronBuy()">Buy</td>
+                        <td><button class="btn btn-success"ng-click="patronBuy(walmartItem.addToCartUrl)">Buy</button></td>
                     </tr>
                 </table>
 
