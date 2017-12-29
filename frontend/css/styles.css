@@ -27,19 +27,21 @@ padding: 20px;
 background-color: #FDFCFD;
 }
 
+
+
 .featured-projects {
 height: auto;
 background-color: #D9D4CF;
 }
 
 .about-us {
-height: 130px;
+height: 800px;
 background-color: #FDFCFD;
 }
 
 .footer {
-height: 25px;
-padding: 2px;
+height: 30px;
+padding: 3px;
 color: aliceblue;
 background-color: #1D2B27;
 }
@@ -70,4 +72,8 @@ background-color: #1D2B27;
 
 .mid {
   padding: 30px;
+}
+
+.midx {
+  padding: 40px;
 }

@@ -75,6 +75,7 @@
         <th>Description</th>
         <th>Image</th>
         <th>Customer Review</th>
+        <th>Delete</th>
       </tr>
       <tr ng-repeat="walmartProduct in walmartItems">
         <td>{{ walmartProduct.id }}</td>
@@ -104,8 +105,8 @@
       </div>
       <div class="form-group col-md-8">
          
-              <input class="form-control input-lg" ng-model="query" type="text">
-                <button class="btn input-lg btn-default pull-right" ng-click="getWalmartProducts()">SEARCH WALMART</button>
+              <input class="form-control input-lg" ng-model="query" type="text" placeholder="Search products from Walmart.com">
+                <button class="btn input-lg btn-default pull-right"  ng-click="getWalmartProducts()">SEARCH</button>
           </div>
         
       </div>
@@ -119,7 +120,7 @@
     
 
 
-    <div class="container-fluid">
+    <div class="container">
       <table class="table table-hover">
         <tr>
           <th>Name</th>
@@ -127,6 +128,7 @@
           <th>Description</th>
           <th>Image</th>
           <th>Customer Review</th>
+          <th>Add</th>
         </tr>
         <tr>
           <h3>Products Added: {{ productsAdded }}</h3>
