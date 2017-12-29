@@ -46,7 +46,7 @@ namespace backend.Controllers
             return _context.patrons.ToList ();
         }
 
-        // GET api/values/5
+        // GET by Id
         [HttpGet("{id}")]
         public Patron Get(int id)
         {
@@ -60,8 +60,7 @@ namespace backend.Controllers
             return null;
         }
         
-
-        // POST api/values
+        // POST
         [HttpPost]
         public Patron Post([FromBody]Patron p)
         {
@@ -72,7 +71,7 @@ namespace backend.Controllers
             return p;
         }
 
-        // PUT api/values/5
+        // PUT
         [HttpPut ("{id}")]
         public Patron Put (int id, [FromBody] Patron patron)
         {
@@ -91,7 +90,7 @@ namespace backend.Controllers
             return null;
         }
 
-        // DELETE api/values/5
+        // DELETE
         [HttpDelete ("{id}")]
         public string Delete (int id)
         {

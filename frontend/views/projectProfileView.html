@@ -1,17 +1,11 @@
 <div class="container">
-
     <div class="row">
-
         <div class="form-group col-md-12">
-
-
             <div class="form-group col-md-5 mid">
                 <h1>{{ project.name }}</h1>
-                
                 <p>
-                    <strong>Start Date: </strong>{{ project.startDate }}<strong> End Date: </strong>{{ project.endDate }}</p>
-                <p>
-                    </p>
+                    <strong>Start Date: </strong>{{ project.startDate }}
+                    <strong> End Date: </strong>{{ project.endDate }</p>
                 <p>
                     <strong>Subject: </strong>{{ project.subject }}</p>
                 <p>
@@ -24,11 +18,7 @@
                     <strong>Teacher Id: </strong>{{ project.teacherId }}</p>
                 <p>
                     <strong>School Id: </strong>{{ project.schoolId }}</p>
-
-
-
             </div>
-
             <div class="form-group col-md-7 midx">
 
                 <table class="table table-hover">
@@ -48,34 +38,17 @@
                         <td>
                             <img ng-src="{{ walmartItem.customerRatingImage }}" alt="">
                         </td>
-                        <td><button class="btn btn-success"ng-click="patronBuy(walmartItem.addToCartUrl)">${{ walmartItem.salePrice }}</button></td>
+                        <td>
+                            <button class="btn btn-success" ng-click="patronBuy(walmartItem.addToCartUrl)">${{ walmartItem.salePrice }}</button>
+                        </td>
                     </tr>
                 </table>
-
 
                 <button class="btn btn-sm btn-info" ui-sref="projectUpdate({id: project.id})">Update</button>
                 <button class="btn btn-sm btn-danger" ng-click="deleteProject()">Delete</button>
                 <button class="btn btn-sm btn-success pull-right" ng-click="addProject()">Add a Project</button>
 
-
-
             </div>
-
-
         </div>
-
-        <div class="row">
-
-        </div>
-
-
-
-
-
     </div>
-
-
-
-
-
 </div>

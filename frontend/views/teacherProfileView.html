@@ -19,9 +19,9 @@
                 <button class="btn btn-sm btn-success pull-right" ui-sref="projectCreate">Add a Project</button>
 
                 <div class="row project-section mid">
-  
-                        <table class="table table-hover">
-                          <tr>
+
+                    <table class="table table-hover">
+                        <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Start Date</th>
@@ -31,9 +31,9 @@
                             <th>Goal Reached?</th>
                             <th>Teacher Id</th>
                             <th>School Id</th>
-                          </tr>
-                          
-                          <tr ng-repeat="project in teacherProjects | filter: projectSearch" ui-sref="project({id: project.id})">
+                        </tr>
+
+                        <tr ng-repeat="project in teacherProjects | filter: projectSearch" ui-sref="project({id: project.id})">
                             <td>{{ project.id }}</td>
                             <td>{{ project.name }}</td>
                             <td>{{ project.startDate }}</td>
@@ -43,16 +43,9 @@
                             <td>{{ project.goalReached }}</td>
                             <td>{{ project.teacherId }}</td>
                             <td>{{ project.schoolId }}</td>
-                          </tr>
-                        </table>
-                        <!-- <button ng-click="getProductsFromProjects()">test</button> -->
-                <!-- change table -->
-                      </div>
-
-                <!-- Ask Billy on Wed -->
-                <!-- How would we pass in a teacherID into new project
-                Example: teacher/3/project/new -->
-
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

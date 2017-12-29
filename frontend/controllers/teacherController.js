@@ -14,8 +14,7 @@ app.controller("teacherController", function ($scope, $state, $stateParams, $htt
 
         $scope.heading = "Create your Teacher Profile";
         $scope.submitButton = true;
-    }
-    else {
+    } else {
         teacherService.getTeacherById($stateParams.id)
             .then(function (response) {
                 console.log(response.data);
@@ -28,19 +27,20 @@ app.controller("teacherController", function ($scope, $state, $stateParams, $htt
                 console.log(error);
             })
     }
-        teacherService.getTeachers()
-            .then(function (response) {
-                console.log(response);
-                $scope.teachers = response.data
-            }, function (error) {
-                console.log(error);
-            })
+
+    teacherService.getTeachers()
+        .then(function (response) {
+            console.log(response);
+            $scope.teachers = response.data;
+        }, function (error) {
+            console.log(error);
+        })
 
     $scope.addTeacher = function () {
         teacherService.addTeacher($scope.teacher)
             .then(function (response) {
                 console.log(response);
-                $state.go("teacher", {id: response.data.id});
+                $state.go("teacher", { id: response.data.id });
             }, function (error) {
                 console.log(error);
             })
@@ -52,11 +52,12 @@ app.controller("teacherController", function ($scope, $state, $stateParams, $htt
         teacherService.updateTeacher($scope.teacher.id, $scope.teacher)
             .then(function (response) {
                 console.log(response);
-                $state.go("teacher", {id: $stateParams.id})
+                $state.go("teacher", { id: $stateParams.id })
             }, function (error) {
                 console.log(error);
             })
     }
+
     $scope.deleteTeacher = function () {
         teacherService.deleteTeacher($scope.teacher.id)
             .then(function (response) {

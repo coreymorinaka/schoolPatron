@@ -20,32 +20,5 @@ namespace backend.Controllers
 
             return response;
         }
-        //  GET api/values/5
-        // [HttpGet("{id}")]
-        // public WalmartProduct Get(int id)
-        // {
-            
-        // }
-        
-        // // POST api/values
-        // [HttpPost]
-        // public WalmartProduct Post([FromBody]WalmartProduct p)
-        // {
-            
-        // }
-
-        // // PUT api/values/5
-        // [HttpPut ("{id}")]
-        // public WalmartProduct Put (int id, [FromBody] WalmartProduct product)
-        // {
-           
-        // }
-
-        // // DELETE api/values/5
-        // [HttpDelete ("{id}")]
-        // public string Delete (int id)
-        // {
-        
-        // }
     }
 }

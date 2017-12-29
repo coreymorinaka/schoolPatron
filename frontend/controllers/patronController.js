@@ -1,6 +1,6 @@
 app.controller("patronController", function ($scope, $state, $stateParams, $http, $location, $anchorScroll, patronService) {
 
-    $scope.goToBottom = function(){
+    $scope.goToBottom = function () {
         $location.hash('bottom');
         $anchorScroll();
     }
@@ -13,7 +13,7 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
             Email: "",
             Password: ""
         }
-        
+
         $scope.heading = "Create your Patron Profile";
         $scope.submitButton = true;
     }
@@ -24,25 +24,26 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
                 $scope.patron = response.data;
                 $scope.heading = "Update your Profile!";
                 $scope.submitButton = false;
-                
+
                 console.log($scope.patron);
             }, function (error) {
                 console.log(error);
             })
     }
-        patronService.getPatrons()
-            .then(function (response) {
-                console.log(response);
-                $scope.patrons = response.data
-            }, function (error) {
-                console.log(error);
-            })
+
+    patronService.getPatrons()
+        .then(function (response) {
+            console.log(response);
+            $scope.patrons = response.data
+        }, function (error) {
+            console.log(error);
+        })
 
     $scope.addPatron = function () {
         patronService.addPatron($scope.patron)
             .then(function (response) {
                 console.log(response);
-                $state.go("patron", {id: response.data.id});
+                $state.go("patron", { id: response.data.id });
             }, function (error) {
                 console.log(error);
             })
@@ -54,7 +55,7 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
         patronService.updatePatron($scope.patron.id, $scope.patron)
             .then(function (response) {
                 console.log(response);
-                $state.go("patron", {id: $stateParams.id});
+                $state.go("patron", { id: $stateParams.id });
             }, function (error) {
                 console.log(error);
             })

@@ -49,17 +49,18 @@ namespace backend.Controllers
             return _context.projects.ToList ();
         }
 
+        //Get walmart
         [HttpGet ("walmart")]
         public List<WalmartProduct> GetWalmartProducts ()
         {
             return _context.walmartProducts.ToList ();
         }
 
-        // GET api/values/5
+        // GET by Id
         [HttpGet ("{id}")]
         public Project GetProjectById (int id)
         {
-            foreach (Project p in _context.projects.Include("walmartProducts"))
+            foreach (Project p in _context.projects.Include ("walmartProducts"))
             {
                 if (p.Id == id)
                 {
@@ -69,7 +70,7 @@ namespace backend.Controllers
             return null;
         }
 
-        // POST api/values
+        // POST
         [HttpPost]
         public Project Post ([FromBody] Project p)
         {
@@ -80,6 +81,7 @@ namespace backend.Controllers
             return p;
         }
 
+        //POST walmart
         [HttpPost ("walmart")]
         public WalmartProduct Post ([FromBody] WalmartProduct p)
         {
@@ -90,16 +92,16 @@ namespace backend.Controllers
             return p;
         }
 
-        // PUT api/values/5
+        // PUT walmart
         [HttpPut ("walmart/{id}")]
         public Project Put (int id, [FromBody] Project project)
         {
-            foreach (Project p in _context.projects.Include("walmartProducts"))
+            foreach (Project p in _context.projects.Include ("walmartProducts"))
             {
                 if (p.Id == id)
                 {
-                    // _context.projects.Remove (p);
-                    // _context.SaveChanges ();
+                    _context.projects.Remove (p);
+                    _context.SaveChanges ();
                     _context.projects.Add (project);
                     _context.SaveChanges ();
 
@@ -109,7 +111,7 @@ namespace backend.Controllers
             return null;
         }
 
-        // DELETE api/values/5
+        // DELETE
         [HttpDelete ("{id}")]
         public string Delete (int id)
         {
@@ -124,6 +126,8 @@ namespace backend.Controllers
             }
             return "not found";
         }
+
+        //DELETE walmart
         [HttpDelete ("walmart/{id}")]
         public string DeleteItem (int id)
         {

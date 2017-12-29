@@ -12,14 +12,12 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
             GoalReached: false,
             TeacherId: null,
             SchoolId: null,
-            // walmartProducts = null
         }
 
         $scope.heading = "Create a Project";
         $scope.submitButton = true;
         $scope.goal = false;
-    }
-    else {
+    } else {
         projectService.getProjectById($stateParams.id)
             .then(function (response) {
                 console.log(response.data);
@@ -63,6 +61,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
+
     $scope.deleteProject = function () {
         console.log("test");
         projectService.deleteProject($stateParams.id)
@@ -73,23 +72,17 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
-    var quoteParse = function (item){
-        for(var i = 0; i < item; i++){
-            console.log(item[i]);
-            item[i].shortDescription.replace(/&quot;/g, "")
 
-        }
-    }
     //Search for Walmart Products
     $scope.getWalmartProducts = function () {
         walmartService.getWalmartProducts($scope.query)
             .then(function (response) {
                 console.log(response);
                 $scope.items = response.data.items;
-                for(var i = 0; i < $scope.items.length; i++){
+                for (var i = 0; i < $scope.items.length; i++) {
                     console.log("test")
                     console.log($scope.items[i].shortDescription);
-                    $scope.items[i].shortDescription = $scope.items[i].shortDescription.replace(/&quot;/g, "");
+                    $scope.items[i].shortDescription = $scope.items[i].shortDescription.replace(/&quot;/g, ""); ç
                 }
                 console.log($scope.items);
             }, function (error) {
@@ -119,7 +112,8 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
-    $scope.deleteItem = function (id){
+    //Deleting items from project list
+    $scope.deleteItem = function (id) {
         console.log("test");
         projectService.deleteItem(id)
             .then(function (response) {
@@ -130,7 +124,8 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
-    $scope.patronBuy = function(url){
+
+    $scope.patronBuy = function (url) {
         window.open(url, "_blank");
     }
 })

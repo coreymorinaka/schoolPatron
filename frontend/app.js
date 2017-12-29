@@ -16,7 +16,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/patronsView.html",
       controller: "patronController"
     })
-  
+
     .state("patronCreate", {
       url: "/patron/new",
       templateUrl: "./views/patronFormView.html",
@@ -39,26 +39,26 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/teachersView.html",
       controller: "teacherController"
     })
-  
+
     .state("teacherCreate", {
       url: "/teacher/new",
       templateUrl: "./views/teacherFormView.html",
       controller: "teacherController"
     })
-  
+
     .state("teacher", {
       url: "/teacher/:id",
       templateUrl: "./views/teacherProfileView.html",
       controller: "teacherController"
     })
-  
+
     .state("teacherUpdate", {
       url: "/teacher/:id/edit",
       templateUrl: "./views/teacherFormView.html",
       controller: "teacherController"
     })
 
-  //PROJECT
+    //PROJECT
     .state("projects", {
       url: "/projects",
       templateUrl: "./views/projectListView.html",
@@ -79,11 +79,4 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: "./views/projectFormView.html",
       controller: "projectController"
     })
-
-  // .state("teacherProject", {
-  //   url: "/teacher/:id/project/new", 
-  //   templateUrl: "./views/projectFormView.html", 
-  //   controller: "projectController", 
-  // })
-
 })
