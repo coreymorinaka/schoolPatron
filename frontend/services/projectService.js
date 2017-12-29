@@ -16,7 +16,6 @@ app.service("projectService", function ($state, $http) {
     this.deleteProject= function (id) {
         return $http.delete("http://localhost:5000/project/" + id)
     }
-
     //Post and Get Walmart Products to/from Projects
     this.addWalmartProductToProject = function (item) {
         console.log("success");
