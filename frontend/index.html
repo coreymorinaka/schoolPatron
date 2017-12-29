@@ -25,35 +25,21 @@
 
 <body>
 
-        <div class="row menu text-center">
-                <div class="col-md-7">
-                    <img src="./images/logo.png" alt="">
-                    <button class="btn btn-link" ui-sref="home">HOME</button> |
-                    <a ui-sref="projects">PROJECTS</a> |
-                    <a ui-sref="teachers">TEACHERS</a> |
-                    <a ui-sref="patrons">PATRONS</a> | ABOUT US </div>
-                <div class="col-md-5 login">
-                    <button class="btn btn-info" ui-sref="patronCreate">Patron Sign Up</button>
-                    <button class="btn btn-info" ui-sref="teacherCreate">Teacher Sign Up</button>
-                    
-                </div>
+ 
         
         
-        
-        
-            </div>
     <div class="row menu text-center">
-        <div class="col-md-7">
+        <div class="col-md-8">
             <img src="./images/logo.png" alt="">
-            <a ui-sref="home">HOME</a> |
-            <a ui-sref="projects">PROJECTS</a> |
-            <a ui-sref="teachers">TEACHERS</a> |
-            <a ui-sref="patrons">PATRONS</a> |
-            <a ng-controller="patronController" ng-click="goToBottom()">ABOUT US</a> |
+            <button class="btn btn-link" ui-sref="home">HOME</a> 
+            <button class="btn btn-link" ui-sref="projects">PROJECTS</button> 
+            <button class="btn btn-link" ui-sref="teachers">TEACHERS</button> 
+            <button class="btn btn-link" ui-sref="patrons">PATRONS</button> 
+            <button class="btn btn-link" ng-controller="patronController" ng-click="goToBottom()">ABOUT US</button> 
         </div>
-        <div class="col-md-5 login">
-            <button ui-sref="patronCreate">Patron Sign Up</button>
-            <button ui-sref="teacherCreate">Teacher Sign Up</button>
+        <div class="col-md-4 login">
+            <button class="btn btn-info" ui-sref="patronCreate">Patron Sign Up</button>
+            <button class="btn btn-info" ui-sref="teacherCreate">Teacher Sign Up</button>
         </div>
     </div>
 
