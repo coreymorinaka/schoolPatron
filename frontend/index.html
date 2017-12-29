@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <title>School Patron</title>
 
     <!-- Google Font - Open Sans -->
@@ -13,10 +13,10 @@
     <!-- Bootstrap CDN 3.3.7 -->
     <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
     />
-   
-     <!-- Custom CSS -->
-     <link rel="stylesheet" href="./css/styles.css">
-    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
     <!-- Angular CDN 1.6.5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     <!-- Angular UI Router CDN 0.4.2 -->
@@ -42,6 +42,20 @@
         
         
             </div>
+    <div class="row menu text-center">
+        <div class="col-md-7">
+            <img src="./images/logo.png" alt="">
+            <a ui-sref="home">HOME</a> |
+            <a ui-sref="projects">PROJECTS</a> |
+            <a ui-sref="teachers">TEACHERS</a> |
+            <a ui-sref="patrons">PATRONS</a> |
+            <a ng-controller="patronController" ng-click="goToBottom()">ABOUT US</a> |
+        </div>
+        <div class="col-md-5 login">
+            <button ui-sref="patronCreate">Patron Sign Up</button>
+            <button ui-sref="teacherCreate">Teacher Sign Up</button>
+        </div>
+    </div>
 
 
 
