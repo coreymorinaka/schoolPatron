@@ -25,7 +25,7 @@
           <div class="form-group col-md-12 middle">
             
           </div>
-          <tr ng-repeat="project in projects | filter: projectSearch" ui-sref="project({id: project.id})">
+          <tr ng-repeat="project in projects | filter: projectSearch" ui-sref="project({id: project.id})" ng-class="{'reached' : project.goalReached}">
             <td>{{ project.id }}</td>
             <td>{{ project.name }}</td>
             <td>{{ project.startDate }}</td>
