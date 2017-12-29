@@ -34,15 +34,13 @@
                 <table class="table table-hover">
                     <tr>
                         <th>Name</th>
-                        <th>Price</th>
                         <th>Description</th>
                         <th>Image</th>
-                        <th>Customer Review</th>
+                        <th>Review</th>
                         <th>Buy</th>
                     </tr>
                     <tr ng-repeat="walmartItem in walmartItems">
                         <td>{{ walmartItem.name }}</td>
-                        <td>{{ walmartItem.salePrice }}</td>
                         <td>{{ walmartItem.shortDescription }}</td>
                         <td>
                             <img ng-src="{{ walmartItem.mediumImage }}" alt="">
@@ -50,7 +48,7 @@
                         <td>
                             <img ng-src="{{ walmartItem.customerRatingImage }}" alt="">
                         </td>
-                        <td><button class="btn btn-success"ng-click="patronBuy(walmartItem.addToCartUrl)">Buy</button></td>
+                        <td><button class="btn btn-success"ng-click="patronBuy(walmartItem.addToCartUrl)">${{ walmartItem.salePrice }}</button></td>
                     </tr>
                 </table>
 
