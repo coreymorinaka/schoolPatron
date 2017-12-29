@@ -5,4 +5,4 @@ bin
 .vs
 node_modules
 .csproj
-frontend/.DS_Store
+./frontend/.DS_Store
