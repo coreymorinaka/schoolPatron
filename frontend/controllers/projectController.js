@@ -73,12 +73,24 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
+    var quoteParse = function (item){
+        for(var i = 0; i < item; i++){
+            console.log(item[i]);
+            item[i].shortDescription.replace(/&quot;/g, "")
+
+        }
+    }
     //Search for Walmart Products
     $scope.getWalmartProducts = function () {
         walmartService.getWalmartProducts($scope.query)
             .then(function (response) {
                 console.log(response);
                 $scope.items = response.data.items;
+                for(var i = 0; i < $scope.items.length; i++){
+                    console.log("test")
+                    console.log($scope.items[i].shortDescription);
+                    $scope.items[i].shortDescription = $scope.items[i].shortDescription.replace(/&quot;/g, "");
+                }
                 console.log($scope.items);
             }, function (error) {
                 console.log(error);

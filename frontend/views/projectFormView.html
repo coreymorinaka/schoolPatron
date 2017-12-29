@@ -33,7 +33,7 @@
         <input type="text" placeholder="5" class="form-control" ng-model="project.gradeLevel" required="required">
       </div>
 
-      
+
 
       <div class="form-group col-md-6">
         <label>Description</label>
@@ -42,26 +42,26 @@
 
 
       <div class="form-group col-md-2">
-          <label>Teacher Id</label>
-          <input type="number" class="form-control" ng-model="project.teacherId" required="required">
-        </div>
-  
-        <div class="form-group col-md-2">
-          <label>School Id</label>
-          <input type="number" class="form-control" placeholder="3" ng-model="project.schoolId" required="required">
-        </div>
-  
-        <div class="form-group col-md-2" ng-show="goal">
-          <label>Goal Reached?</label>
-          <input type="checkbox" class="form-control" ng-model="project.goalReached">
-          
-        </div>
-        <div class="form-group col-md-12">
-            <button type="submit" class="btn btn-primary btn-lg pull-right" ng-show="submitButton">Submit</button>
-            <button type="submit" class="btn btn-success btn-lg pull-right" ng-show="!submitButton">Save</button>
-        </div>
+        <label>Teacher Id</label>
+        <input type="number" class="form-control" ng-model="project.teacherId" required="required">
+      </div>
 
-      
+      <div class="form-group col-md-2">
+        <label>School Id</label>
+        <input type="number" class="form-control" placeholder="3" ng-model="project.schoolId" required="required">
+      </div>
+
+      <div class="form-group col-md-2" ng-show="goal">
+        <label>Goal Reached?</label>
+        <input type="checkbox" class="form-control" ng-model="project.goalReached">
+
+      </div>
+      <div class="form-group col-md-12">
+        <button type="submit" class="btn btn-primary btn-lg pull-right" ng-show="submitButton">Submit</button>
+        <button type="submit" class="btn btn-success btn-lg pull-right" ng-show="!submitButton">Save</button>
+      </div>
+
+
     </form>
   </div>
 
@@ -97,58 +97,54 @@
 
 
   <div class="container">
-    
+
     <div class="row">
 
       <div class="form-group col-md-2">
-        
+
       </div>
       <div class="form-group col-md-8">
-         
-              <input class="form-control input-lg" ng-model="query" type="text" placeholder="Search products from Walmart.com">
-                <button class="btn input-lg btn-default pull-right"  ng-click="getWalmartProducts()">SEARCH</button>
-          </div>
-        
-      </div>
-      <div class="form-group col-md-2">
-        
+
+        <input class="form-control input-lg" ng-model="query" type="text" placeholder="Search products from Walmart.com">
+        <button class="btn input-lg btn-default pull-right" ng-click="getWalmartProducts()">SEARCH</button>
       </div>
 
     </div>
-   
-    
-    
+    <div class="form-group col-md-2">
 
-
-    <div class="container">
-      <table class="table table-hover">
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Description</th>
-          <th>Image</th>
-          <th>Customer Review</th>
-          <th>Add</th>
-        </tr>
-        <tr>
-          <h3>Products Added: {{ productsAdded }}</h3>
-        </tr>
-        <tr ng-repeat="item in items | filter: projectSearch">
-
-          <td>{{ item.name }}</td>
-          <td>${{ item.salePrice }}</td>
-          <td>{{ item.shortDescription }}</td>
-          <td>
-            <img ng-src="{{ item.mediumImage }}" alt="">
-          </td>
-          <td>
-            <img ng-src="{{ item.customerRatingImage }}" alt="">
-          </td>
-          <td>
-            <button class="btn btn-primary" ng-click="addWalmartProductToProject(item)">Add</button>
-          </td>
-        </tr>
-      </table>
     </div>
+
   </div>
+
+  <div class="container">
+    <table class="table table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Customer Review</th>
+        <th>Add</th>
+      </tr>
+      <tr>
+        <h3>Products Added: {{ productsAdded }}</h3>
+      </tr>
+      <tr ng-repeat="item in items | filter: projectSearch">
+
+        <td>{{ item.name }}</td>
+        <td>${{ item.salePrice }}</td>
+        <td>{{ item.shortDescription }}</td>
+        <td>
+          <img ng-src="{{ item.mediumImage }}" alt="">
+        </td>
+        <td>
+          <img ng-src="{{ item.customerRatingImage }}" alt="">
+        </td>
+        <td>
+          <button class="btn btn-primary" ng-click="addWalmartProductToProject(item)">Add</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
 </div>
