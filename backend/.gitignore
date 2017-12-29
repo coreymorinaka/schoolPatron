@@ -4,4 +4,9 @@ bin
 .DS_Store
 .vs
 node_modules
+<<<<<<< HEAD
 .csproj
+=======
+.csproj
+./frontend/.DS_Store
+>>>>>>> 2e823bf3ab0ab3d28de13c58279072518648bf05
