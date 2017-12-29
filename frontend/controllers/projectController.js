@@ -82,7 +82,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 for (var i = 0; i < $scope.items.length; i++) {
                     console.log("test")
                     console.log($scope.items[i].shortDescription);
-                    $scope.items[i].shortDescription = $scope.items[i].shortDescription.replace(/&quot;/g, ""); ç
+                    $scope.items[i].shortDescription = $scope.items[i].shortDescription.replace(/&quot;/g, "");
                 }
                 console.log($scope.items);
             }, function (error) {

@@ -60,6 +60,7 @@ app.controller("patronController", function ($scope, $state, $stateParams, $http
                 console.log(error);
             })
     }
+
     $scope.deletePatron = function () {
         patronService.deletePatron($scope.patron.id)
             .then(function (response) {

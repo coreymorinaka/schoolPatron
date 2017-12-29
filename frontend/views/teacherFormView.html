@@ -1,11 +1,10 @@
 <div class="teacher-form">
-
   <div class="container">
-
     <h1 class="text-center teacher-form-header">{{ heading }}</h1>
 
     <h3 class="teacher-section-header">Teacher Information</h3>
     <form ng-submit="addTeacher(teacher)" ng-submit="updateTeacher(teacher)">
+
       <div class="form-group col-md-6">
         <label>First Name</label>
         <input type="text" class="form-control" placeholder="Valerie" ng-model="teacher.firstName" required="required">
@@ -26,8 +25,6 @@
         <input type="password" class="form-control" required="required">
       </div>
 
-
-
       <div class="form-group col-md-10">
         <label>Bio</label>
         <textarea name="" id="" cols="140" rows="10" ng-model="teacher.bio"></textarea>
@@ -37,6 +34,7 @@
         <label>Grade Level</label>
         <input type="text" class="form-control" ng-model="teacher.gradeLevel" required="required">
       </div>
+      
       <div class="form-group col-md-12">
         <label>School Id</label>
         <input type="number" class="form-control" placeholder="3" ng-model="teacher.schoolId" required="required">
