@@ -1,4 +1,9 @@
-app.controller("patronController", function ($scope, $state, $stateParams, $http, patronService) {
+app.controller("patronController", function ($scope, $state, $stateParams, $http, $location, $anchorScroll, patronService) {
+
+    $scope.goToBottom = function(){
+        $location.hash('bottom');
+        $anchorScroll();
+    }
 
     if ($stateParams.id == null || $stateParams.id == "" || $stateParams.id == undefined) {
         $scope.patron = {

@@ -7,6 +7,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     .state("home", {
       url: "/",
       templateUrl: "./views/homeView.html",
+      controller: "patronController"
     })
 
     // PATRONS 
