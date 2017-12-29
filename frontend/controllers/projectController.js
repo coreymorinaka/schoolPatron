@@ -118,4 +118,7 @@ app.controller("projectController", function ($scope, $state, $stateParams, proj
                 console.log(error);
             })
     }
+    $scope.patronBuy = function(url){
+        window.open(url, "_blank");
+    }
 })

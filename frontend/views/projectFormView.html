@@ -88,7 +88,7 @@
           <img ng-src="{{ walmartProduct.customerRatingImage }}" alt="">
         </td>
         <td>
-          <button ng-click="deleteItem(walmartProduct.id)">Delete</button>
+          <button class="btn btn-danger" ng-click="deleteItem(walmartProduct.id)">Delete</button>
         </td>
       </tr>
     </table>
@@ -126,7 +126,7 @@
             <img ng-src="{{ item.customerRatingImage }}" alt="">
           </td>
           <td>
-            <button ng-click="addWalmartProductToProject(item)">Add</button>
+            <button class="btn btn-primary" ng-click="addWalmartProductToProject(item)">Add</button>
           </td>
         </tr>
       </table>
