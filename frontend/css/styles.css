@@ -78,5 +78,6 @@ background-color: #1D2B27;
   padding: 40px;
 }
 .reached {
-  color: green;
+  color: white;
+  background: #47bfc2;
 }
